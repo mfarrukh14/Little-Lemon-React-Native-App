@@ -6,14 +6,17 @@ import Welcome from './components/Welcome'
 import MenuItems from './components/MenuItems'
 import FeedbackForm from './components/FeedbackForm'
 import LoginScreen from './components/LoginScreen'
+import { NavigationContainer } from '@react-navigation/native';
 
 const App = () => {
   return (
-    <View style={styles.conatiner}>
+    <NavigationContainer>
+ <View style={styles.conatiner}>
     <LittleLemonHeader />
     <Welcome />
     <LittleLemonFooter />
     </View>
+    </NavigationContainer>
   );
 };
 
