@@ -13,16 +13,16 @@ const Welcome = () => {
     <View style={styles.container}>
       <Image source={require('../img/logo.png')} style={styles.Image} />
       <ScrollView hroizontal={false} indicatorStyle={'white'} style={[styles.scroll,Colorscheme === 'light' ? {backgroundColor:'white'} : {backgroundColor:'dimgray'}]}>
-        <Text style={styles.text2}>Little Lemon is a charming neighborhood bistro that serves simple food
+        <Text style={[styles.text2,Colorscheme === 'light' ? {color:'black'} : {color:'white'}]}>Little Lemon is a charming neighborhood bistro that serves simple food
           and classic cocktails in a lively but casual environment. We would love
           to hear your experience with us!</Text>
-          <Text style={styles.text2}>Color Scheme: {Colorscheme}</Text>
-          <Text style={styles.text2}>My apps dimensions: </Text>
-          <Text style={styles.text2}>Height: {height}</Text>
-          <Text style={styles.text2}>Width: {width}</Text>
-          <Text style={styles.text2}>Orientation: {Orientation}</Text>
-          <Text style={styles.text2}>Font Scale: {fontScale}</Text>
-          <Text style={styles.text2}>State: {myappState}</Text>
+          <Text style={[styles.text2,Colorscheme === 'light' ? {color:'black'} : {color:'white'}]}>Color Scheme: {Colorscheme}</Text>
+          <Text style={[styles.text2,Colorscheme === 'light' ? {color:'black'} : {color:'white'}]}>My apps dimensions: </Text>
+          <Text style={[styles.text2,Colorscheme === 'light' ? {color:'black'} : {color:'white'}]}>Height: {height}</Text>
+          <Text style={[styles.text2,Colorscheme === 'light' ? {color:'black'} : {color:'white'}]}>Width: {width}</Text>
+          <Text style={[styles.text2,Colorscheme === 'light' ? {color:'black'} : {color:'white'}]}>Orientation: {Orientation}</Text>
+          <Text style={[styles.text2,Colorscheme === 'light' ? {color:'black'} : {color:'white'}]}>Font Scale: {fontScale}</Text>
+          <Text style={[styles.text2,Colorscheme === 'light' ? {color:'black'} : {color:'white'}]}>State: {myappState}</Text>
       </ScrollView>
     </View>
 )}
@@ -43,10 +43,8 @@ const styles = StyleSheet.create({
     marginBottom: 10
   },
   text2: {
-    color: 'white',
     fontSize: 20,
     textAlign:'center'
-
   },
   Image: {
     height: 100,
