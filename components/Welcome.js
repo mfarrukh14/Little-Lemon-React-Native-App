@@ -1,5 +1,5 @@
 import React from 'react';
-import {useAppState} from '@react-native-community/hooks'
+import {useAppState,useDeviceOrientation} from '@react-native-community/hooks'
 import { Text, View, StyleSheet, ScrollView, Image,ImageBackground,useColorScheme, useWindowDimensions} from 'react-native';
 
 
@@ -8,6 +8,7 @@ const Welcome = () => {
   const Colorscheme = useColorScheme();
   const {width,height,fontScale} = useWindowDimensions();
   const myappState = useAppState();
+  const Orientation = useDeviceOrientation();
   return (
     <View style={styles.container}>
       <Image source={require('../img/logo.png')} style={styles.Image} />
@@ -19,6 +20,7 @@ const Welcome = () => {
           <Text style={styles.text2}>My apps dimensions: </Text>
           <Text style={styles.text2}>Height: {height}</Text>
           <Text style={styles.text2}>Width: {width}</Text>
+          <Text style={styles.text2}>Orientation: {Orientation}</Text>
           <Text style={styles.text2}>Font Scale: {fontScale}</Text>
           <Text style={styles.text2}>State: {myappState}</Text>
       </ScrollView>
