@@ -1,18 +1,18 @@
 import React from 'react';
-import { Text, View, StyleSheet, ScrollView, Image,ImageBackground} from 'react-native';
+import { Text, View, StyleSheet, ScrollView, Image,ImageBackground,useColorScheme} from 'react-native';
 
-const WelcomeData = [
 
-];
 
 const Welcome = () => {
+  const Colorscheme = useColorScheme();
   return (
     <View style={styles.container}>
       <Image source={require('../img/logo.png')} style={styles.Image} />
-      <ScrollView hroizontal={false} indicatorStyle={'white'} style={styles.scroll}>
+      <ScrollView hroizontal={false} indicatorStyle={'white'} style={[styles.scroll,Colorscheme === 'light' ? {backgroundColor:'white'} : {backgroundColor:'dimgray'}]}>
         <Text style={styles.text2}>Little Lemon is a charming neighborhood bistro that serves simple food
           and classic cocktails in a lively but casual environment. We would love
           to hear your experience with us!</Text>
+          <Text style={styles.text2}>Color Scheme: {Colorscheme}</Text>
       </ScrollView>
     </View>
 )}
@@ -26,7 +26,6 @@ const styles = StyleSheet.create({
   scroll: {
     flex: 1,
     padding: 25,
-    backgroundColor: 'dimgray'
   },
   text1: {
     color: 'white',
