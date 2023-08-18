@@ -1,10 +1,11 @@
 import React from 'react';
-import { Text, View, StyleSheet, ScrollView, Image,ImageBackground,useColorScheme} from 'react-native';
+import { Text, View, StyleSheet, ScrollView, Image,ImageBackground,useColorScheme, useWindowDimensions} from 'react-native';
 
 
 
 const Welcome = () => {
   const Colorscheme = useColorScheme();
+  const {width,height,fontScale} = useWindowDimensions();
   return (
     <View style={styles.container}>
       <Image source={require('../img/logo.png')} style={styles.Image} />
@@ -13,6 +14,10 @@ const Welcome = () => {
           and classic cocktails in a lively but casual environment. We would love
           to hear your experience with us!</Text>
           <Text style={styles.text2}>Color Scheme: {Colorscheme}</Text>
+          <Text style={styles.text2}>My apps dimensions: </Text>
+          <Text style={styles.text2}>Height: {height}</Text>
+          <Text style={styles.text2}>Width: {width}</Text>
+          <Text style={styles.text2}>Font Scale: {fontScale}</Text>
       </ScrollView>
     </View>
 )}
