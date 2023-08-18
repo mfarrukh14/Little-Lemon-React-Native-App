@@ -15,7 +15,7 @@ This repository contains the code for my beginner project, the **Little Lemon Re
 To explore the Little Lemon React Native App and dive into its codebase, follow these steps:
 
 1. Clone this repository to your local machine using the following command:
-```git clone https://github.com/your-username/little-lemon-react-native.git```
+```https://github.com/mfarrukh14/Little-Lemon-React-Native-App.git```
 
 2. Navigate to the project directory:
 ```cd little-lemon-react-native```
