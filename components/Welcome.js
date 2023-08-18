@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, ScrollView, Image } from 'react-native';
+import { Text, View, StyleSheet, ScrollView, Image,ImageBackground} from 'react-native';
 
 const WelcomeData = [
 
@@ -8,9 +8,8 @@ const WelcomeData = [
 const Welcome = () => {
   return (
     <View style={styles.container}>
-      <Image source={require('../img/littlelemon.jpg')} style={styles.Image} />
+      <Image source={require('../img/logo.png')} style={styles.Image} />
       <ScrollView hroizontal={false} indicatorStyle={'white'} style={styles.scroll}>
-        <Text style={styles.text1}>Welcome to Little Lemon</Text>
         <Text style={styles.text2}>Little Lemon is a charming neighborhood bistro that serves simple food
           and classic cocktails in a lively but casual environment. We would love
           to hear your experience with us!</Text>
@@ -36,14 +35,16 @@ const styles = StyleSheet.create({
   },
   text2: {
     color: 'white',
-    fontSize: 20
+    fontSize: 20,
+    textAlign:'center'
 
   },
   Image: {
     height: 100,
     width: 100,
     marginTop: 10,
-    borderRadius: 30
+    borderRadius: 0,
+    alignSelf:'center'
   }
 
 })

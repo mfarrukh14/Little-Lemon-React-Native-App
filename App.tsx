@@ -12,6 +12,7 @@ const App = () => {
     <View style={styles.conatiner}>
     <LittleLemonHeader />
     <Welcome />
+    <LittleLemonFooter />
     </View>
   );
 };
