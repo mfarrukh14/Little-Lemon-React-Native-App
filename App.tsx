@@ -17,7 +17,6 @@ function LogoTitle(){
     style = {{
       height:40,
       width:300,
-      marginLeft:20,
       resizeMode:'contain',
       alignSelf:'center'
     }
@@ -29,9 +28,10 @@ function LogoTitle(){
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Welcome" screenOptions={{ headerStyle: { backgroundColor: '#333333' },headerTintColor:'#fff',headerTitleStyle:{fontWeight:'bold'}}}>
+      <Stack.Navigator initialRouteName="login" screenOptions={{ headerStyle: { backgroundColor: '#333333' },headerTintColor:'#fff',headerTitleStyle:{fontWeight:'bold'},headerTitleAlign:'center'}}>
       <Stack.Screen options={{title: 'Home',headerTitle: (props)=> <LogoTitle {...props} /> }} name="Welcome" component={Welcome} />
         <Stack.Screen name="MenuItems" component={MenuItems} />
+        <Stack.Screen name="login" component={LoginScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
