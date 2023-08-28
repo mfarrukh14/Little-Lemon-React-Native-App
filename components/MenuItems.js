@@ -50,7 +50,7 @@ const Footer = () => (
 );
 const Separator = () => <View style={styles.separator} />;
 const Header = () => <Text style={styles.text1}>View Menu</Text>;
-const MenuItems = () => {
+const MenuItems = ({navigation}) => {
   const [showMenu, setShowMenu] = useState(false);
   const renderItem = ({ item }) => <Item name={item} />;
   const renderSectionHeader = ({ section: { title } }) => (
@@ -84,6 +84,7 @@ const MenuItems = () => {
           keyExtractor={(item, index) => index.toString()}
         />
       )}
+      <Pressable style = {styles.button} onPress = {()=> navigation.goBack()}><Text >Go Back</Text></Pressable>
     </View>
   );
 };
