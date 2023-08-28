@@ -15,8 +15,8 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Welcome" screenOptions={{ headerStyle: { backgroundColor: '#FBDABB' }}}>
-        <Stack.Screen name="Menu" component={MenuItems} />
-        <Stack.Screen options={{title: 'Home'}} name="Welcome" component={Welcome} />
+      <Stack.Screen options={{title: 'Home'}} name="Welcome" component={Welcome} />
+        <Stack.Screen name="MenuItems" component={MenuItems} />
       </Stack.Navigator>
     </NavigationContainer>
   );

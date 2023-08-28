@@ -1,10 +1,10 @@
 import React from 'react';
 import {useAppState,useDeviceOrientation} from '@react-native-community/hooks'
-import { Text, View, StyleSheet, ScrollView, Image,ImageBackground,useColorScheme, useWindowDimensions} from 'react-native';
+import { Text, View, StyleSheet, ScrollView, Image,Pressable,useColorScheme, useWindowDimensions} from 'react-native';
 
 
 
-const Welcome = () => {
+const Welcome = ({navigation}) => {
   const Colorscheme = useColorScheme();
   const {width,height,fontScale} = useWindowDimensions();
   const myappState = useAppState();
@@ -16,6 +16,7 @@ const Welcome = () => {
         <Text style={[styles.text2,Colorscheme === 'light' ? {color:'black'} : {color:'white'}]}>Little Lemon is a charming neighborhood bistro that serves simple food
           and classic cocktails in a lively but casual environment. We would love
           to hear your experience with us!</Text>
+          <Pressable onPress = {()=>navigation.navigate('MenuItems')}><Text style = {styles.text2}>View Menu</Text></Pressable>
           <Text style={[styles.text2,Colorscheme === 'light' ? {color:'black'} : {color:'white'}]}>Color Scheme: {Colorscheme}</Text>
           <Text style={[styles.text2,Colorscheme === 'light' ? {color:'black'} : {color:'white'}]}>My apps dimensions: </Text>
           <Text style={[styles.text2,Colorscheme === 'light' ? {color:'black'} : {color:'white'}]}>Height: {height}</Text>
