@@ -16,7 +16,7 @@ const Welcome = ({navigation}) => {
         <Text style={[styles.text2,Colorscheme === 'light' ? {color:'black'} : {color:'white'}]}>Little Lemon is a charming neighborhood bistro that serves simple food
           and classic cocktails in a lively but casual environment. We would love
           to hear your experience with us!</Text>
-          <Pressable onPress = {()=>navigation.navigate('MenuItems')}><Text style = {styles.text2}>View Menu</Text></Pressable>
+          <Pressable onPress = {()=>navigation.navigate('Menu')}><Text style = {styles.text2}>View Menu</Text></Pressable>
       </ScrollView>
     </View>
 )}
