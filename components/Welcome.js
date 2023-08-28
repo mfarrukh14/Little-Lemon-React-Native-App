@@ -17,13 +17,6 @@ const Welcome = ({navigation}) => {
           and classic cocktails in a lively but casual environment. We would love
           to hear your experience with us!</Text>
           <Pressable onPress = {()=>navigation.navigate('MenuItems')}><Text style = {styles.text2}>View Menu</Text></Pressable>
-          <Text style={[styles.text2,Colorscheme === 'light' ? {color:'black'} : {color:'white'}]}>Color Scheme: {Colorscheme}</Text>
-          <Text style={[styles.text2,Colorscheme === 'light' ? {color:'black'} : {color:'white'}]}>My apps dimensions: </Text>
-          <Text style={[styles.text2,Colorscheme === 'light' ? {color:'black'} : {color:'white'}]}>Height: {height}</Text>
-          <Text style={[styles.text2,Colorscheme === 'light' ? {color:'black'} : {color:'white'}]}>Width: {width}</Text>
-          <Text style={[styles.text2,Colorscheme === 'light' ? {color:'black'} : {color:'white'}]}>Orientation: {Orientation}</Text>
-          <Text style={[styles.text2,Colorscheme === 'light' ? {color:'black'} : {color:'white'}]}>Font Scale: {fontScale}</Text>
-          <Text style={[styles.text2,Colorscheme === 'light' ? {color:'black'} : {color:'white'}]}>State: {myappState}</Text>
       </ScrollView>
     </View>
 )}

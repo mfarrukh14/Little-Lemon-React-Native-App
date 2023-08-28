@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet,Image } from 'react-native';
 import LittleLemonHeader from './components/LittleLemonHeader'
 import LittleLemonFooter from './components/LittleLemonFooter'
 import Welcome from './components/Welcome'
@@ -11,11 +11,26 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
 
+function LogoTitle(){
+  return(
+    <Image source={require('./img/logo.png')}
+    style = {{
+      height:40,
+      width:300,
+      marginLeft:20,
+      resizeMode:'contain',
+      alignSelf:'center'
+    }
+    }
+    />
+  )
+}
+
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Welcome" screenOptions={{ headerStyle: { backgroundColor: '#FBDABB' }}}>
-      <Stack.Screen options={{title: 'Home'}} name="Welcome" component={Welcome} />
+      <Stack.Navigator initialRouteName="Welcome" screenOptions={{ headerStyle: { backgroundColor: '#333333' },headerTintColor:'#fff',headerTitleStyle:{fontWeight:'bold'}}}>
+      <Stack.Screen options={{title: 'Home',headerTitle: (props)=> <LogoTitle {...props} /> }} name="Welcome" component={Welcome} />
         <Stack.Screen name="MenuItems" component={MenuItems} />
       </Stack.Navigator>
     </NavigationContainer>
