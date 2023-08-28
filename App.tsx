@@ -8,8 +8,11 @@ import FeedbackForm from './components/FeedbackForm'
 import LoginScreen from './components/LoginScreen'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 const Stack = createNativeStackNavigator();
+
+const Tab = createBottomTabNavigator();
 
 function LogoTitle(){
   return(
@@ -28,11 +31,11 @@ function LogoTitle(){
 const App = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="login" screenOptions={{ headerStyle: { backgroundColor: '#333333' },headerTintColor:'#fff',headerTitleStyle:{fontWeight:'bold'},headerTitleAlign:'center'}}>
-      <Stack.Screen options={{title: 'Home',headerTitle: (props)=> <LogoTitle {...props} /> }} name="Welcome" component={Welcome} />
-        <Stack.Screen name="MenuItems" component={MenuItems} />
-        <Stack.Screen name="login" component={LoginScreen} />
-      </Stack.Navigator>
+      <Tab.Navigator initialRouteName="login" screenOptions={{ headerStyle: { backgroundColor: '#333333' },headerTintColor:'#fff',headerTitleStyle:{fontWeight:'bold'},headerTitleAlign:'center'}}>
+      <Tab.Screen options={{title: 'Home',headerTitle: (props)=> <LogoTitle {...props} /> }} name="Welcome" component={Welcome} />
+        <Tab.Screen name="MenuItems" component={MenuItems} />
+        <Tab.Screen name="login" component={LoginScreen} />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 };
