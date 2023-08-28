@@ -7,24 +7,26 @@ import MenuItems from './components/MenuItems'
 import FeedbackForm from './components/FeedbackForm'
 import LoginScreen from './components/LoginScreen'
 import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
     <NavigationContainer>
- <View style={styles.conatiner}>
-    <LittleLemonHeader />
-    <Welcome />
-    <LittleLemonFooter />
-    </View>
+      <Stack.Navigator initialRouteName="Welcome" screenOptions={{ headerStyle: { backgroundColor: '#FBDABB' }}}>
+        <Stack.Screen name="Menu" component={MenuItems} />
+        <Stack.Screen options={{title: 'Home'}} name="Welcome" component={Welcome} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 };
 
 const styles = StyleSheet.create({
-  conatiner: 
+  conatiner:
   {
     flex: 1,
-    backgroundColor:'dimgray'
+    backgroundColor: 'dimgray'
   },
 });
 
